@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: web-content-extractor
+    env: node
+    buildCommand: npm install && npx puppeteer browsers install chrome
+    startCommand: node app.js
+    envVars:
+      - key: NODE_ENV
+        value: production
